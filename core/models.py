@@ -11,4 +11,5 @@ class Kala(models.Model):
                               choices=[("new","نو"),("used","دست دوم ")],
                               default="new")
     descriptions = models.TextField()
-    # producedby = models.CharField(max_length=20)
+    def __str__(self):
+        return f"{self.name} {self.price} {self.status}"
